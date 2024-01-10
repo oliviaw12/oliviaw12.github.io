@@ -1,5 +1,3 @@
-# oliviaw12.github.io
-
 # Personal Website 
 Link to my personal website: https://oliviaw12.github.io
 
