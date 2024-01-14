@@ -6,11 +6,8 @@
   --header-height: 3rem;
 
   /*========== Colors ==========*/
-  --hue-color: hsl(227, 38%, 14%);
-
-  /* HSL color mode */
   --first-color: hsl(227, 38%, 14%);
-  --first-color-lighter: hsl(227, 28%, 83%);
+  --first-color-lighter: hsl(215, 31%, 75%);
 
 
   /*========== Font and typography ==========*/
@@ -61,16 +58,7 @@ body {
   margin: 0 0 var(--header-height) 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--body-color);
-  color: var(--text-color);
-}
-
-h1,
-h2,
-h3,
-h4 {
-  color: var(--title-color);
-  font-weight: var(--font-semi-bold);
+  background-color: hsl(25, 32%, 96%);
 }
 
 ul {
@@ -116,7 +104,7 @@ nav ul li{
 
 /*header words*/
 nav ul li a{
-  color: hsl(239, 27%, 78%);
+  color: hsl(215, 48%, 65%);
   text-decoration: none;
   font-size: 18px;
   position: relative;
@@ -142,10 +130,9 @@ nav ul li a:hover{
 .header-container{
   display: flex;
   align-items: center; 
-  justify-content: space-between; /* Spread the header text and photo to each end */
-   /* Add padding to the sides for spacing */
-   padding: 85px 50px 120px 60px;
-   transition: background-color 0.3s ease; 
+  justify-content: space-between; 
+  padding: 85px 50px 120px 60px;
+  transition: background-color 0.3s ease; 
 }
 
 .header-content {
@@ -245,6 +232,12 @@ nav ul li a:hover{
   background-color: #fff;
 }
 
+.languages,
+.tools{
+  display: inline-block;
+  justify-content: space-between;
+}
+
 .skills__name{
   font-size: 18px;
   font-weight: var(--font-medium);
@@ -257,12 +250,12 @@ nav ul li a:hover{
 }
 
 .skills__bar{
-  background-color:hsl(239, 39%, 73%);
+  background-color:hsl(214, 37%, 55%);
 }
 
 .skills__percentage{
   display: block;
-  background-color: hsl(226, 37%, 24%);
+  background-color: hsl(227, 32%, 30%);
 }
 
 .skills__python, 
@@ -270,7 +263,8 @@ nav ul li a:hover{
   width: 100%;
 }
 
-.skills__assembly{
+.skills__assembly,
+.skills__c{
   width: 80%;
 }
 
@@ -305,7 +299,7 @@ nav ul li a:hover{
 .dates{
   font-weight: 300;
   font-size: 18px;
-  color: hsl(239, 64%, 72%);
+  color: hsl(214, 36%, 53%);
 }
 
 .school{
@@ -315,7 +309,7 @@ nav ul li a:hover{
 
 .location{
   font-size: 18px;
-  color: hsl(239, 6%, 52%);
+  color:hsl(214, 9%, 48%);
 }
 
 
@@ -391,12 +385,13 @@ nav ul li a:hover{
 }
 
 /*==================== CONTACT ME ====================*/
-.contact{
-  padding: 80px 120px 120px 120px;
+.contact-container{
+  padding: 80px 120px 120px 120px; 
+  /* max-width: 700px;
+  margin: 50px auto; */
   font-size: 20px;
-  background-color:hsl(227, 25%, 78%);
+  background-color:hsl(213, 44%, 86%) ;
 }
-
 
 .contact-header {
   font-size: 40px;
@@ -419,8 +414,8 @@ input, textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid #b7b8bb;
+  border-radius: 10px;
   box-sizing: border-box;
   font-size: 16px;
 }
@@ -445,7 +440,7 @@ button:hover {
 /*==================== FOOTER ====================*/
 
 .footer{
-  padding-top: 2rem;
+  padding-top: 0rem;
 }
 
 .footer__container{
@@ -453,8 +448,8 @@ button:hover {
 }
 
 .footer__bg{
-  background-color: hsl(227, 39%, 19%);
-  padding: 2rem 0 3rem;
+  background-color: var(--first-color);
+  padding: 2rem 0 2rem;
 }
 
 .footer__title{
@@ -477,13 +472,13 @@ button:hover {
 }
 
 .copyright{
-  font-size: var(--smaller-font-size);
+  font-size: 18px;
   margin-top: var(--mb-3);
 
   width: 100%;
   text-align: center;
 
-    color:whitesmoke;
+  color: var(--first-color-lighter);
 }
 
 
