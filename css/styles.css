@@ -1,46 +1,14 @@
 /*==================== GOOGLE FONTS ====================*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-/*==================== VARIABLES CSS ====================*/
 :root {
-  --header-height: 3rem;
-
   /*========== Colors ==========*/
-  --first-color: hsl(227, 38%, 14%);
-  --first-color-lighter: hsl(215, 31%, 75%);
-
+  --first-color: hsl(11, 20%, 84%);
+  --first-color-lighter: hsl(17, 41%, 97%);
+  --font-color: #6f4e55;
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
-
-  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
-  --big-font-size: 2rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1.125rem;
-  --normal-font-size: 0.938rem;
-  --small-font-size: 0.813rem;
-  --smaller-font-size: 0.75rem;
-
-  /*========== Font weight ==========*/
-  --font-medium: 500;
-  --font-semi-bold: 600;
-
-  /*========== Margenes Bottom ==========*/
-  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
-  --mb-0-25: 0.25rem;
-  --mb-0-5: 0.5rem;
-  --mb-0-75: 0.75rem;
-  --mb-1: 1rem;
-  --mb-1-5: 1.5rem;
-  --mb-2: 2rem;
-  --mb-2-5: 2.5rem;
-  --mb-3: 3rem;
-
-  /*========== z index ==========*/
-  --z-tooltip: 10;
-  --z-fixed: 100;
-  --z-modal: 1000;
 }
 
 /*==================== BASE ====================*/
@@ -55,10 +23,10 @@ html {
 }
 
 body {
-  margin: 0 0 var(--header-height) 0;
+  margin: 0 0 3rem 0;
   font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  background-color: hsl(25, 32%, 96%);
+  font-size: 0.938rem;
+  background-color: #8a7479;
 }
 
 ul {
@@ -72,67 +40,65 @@ a {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 /* --- HEADER ---- */
-#header{
+#header {
   outline: none;
   width: 100%;
   height: 100vh;
-  background-color: var(--first-color);
+  background-color: hsl(11, 20%, 84%);
   background-size: cover;
   background-position: center;
-  
+
 }
 
-.container{
+.container {
   padding: 10px 10%;
 }
 
-nav{
+nav {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  background-color: #8a7479;
 }
 
-nav ul li{
+nav ul li {
   display: inline-block;
   list-style: none;
   margin: 20px 20px;
 }
 
 /*header words*/
-nav ul li a{
-  color: hsl(215, 48%, 65%);
+nav ul li a {
+  color: var(--first-color-lighter);
   text-decoration: none;
   font-size: 18px;
   position: relative;
   font-weight: bold;
-  transition:  color 0.5;
+  transition: color 0.5;
 }
-nav ul li a:hover{
-  color: #fff;
+
+nav ul li a:hover {
+  color: #a79898;
 }
 
 .sticky-header {
   position: fixed;
   top: 0;
   width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box-shadow for a subtle effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Additional styles for the changed background color */
-.sticky-header.changed-color {
-  background-color: var(--first-color);
-}
-
-.header-container{
+.header-container {
   display: flex;
-  align-items: center; 
-  justify-content: space-between; 
+  align-items: center;
+  justify-content: space-between;
   padding: 85px 50px 120px 60px;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
 }
 
 .header-content {
@@ -141,42 +107,43 @@ nav ul li a:hover{
   align-items: center;
 }
 
-.header-text{
-  margin-top: 12%; 
+.header-text {
+  margin-top: 12%;
   font-size: 25px;
-  text-align:left;
-  color: var(--first-color-lighter);
+  text-align: left;
+  color: #a79898;
   font-style: normal;
   line-height: 2.8;
   padding-left: 2.2rem;
 }
-.header-text h2{
+
+.header-text h2 {
   font-size: 35px;
-  color: #fff;
+  color: #867474;
   text-align: left;
   font-style: normal;
   padding-left: 1.0rem;
 }
-.header-text h1{
+
+.header-text h1 {
   font-size: 90px;
-  color: #fff;
+  color: #5e444a;
   font-style: normal;
   line-height: 1.0;
 }
 
 .header-photo {
   width: 500px;
-  /* max-width: 100%; Ensure the image does not exceed its container */
-  height: auto;
-  margin-left: auto; /* Move the photo to the right */
+  margin-left: auto;
   margin-bottom: 50px;
-  padding: 0 1.6rem;
+  padding: 0 0.25rem;
+  overflow: hidden;
 }
 
-.linkedin__button{
+.linkedin__button {
   padding: 20px;
-  background-color:#fff;
-  color: var(--first-color);
+  background-color: #fff;
+  color: #a79898;
   border: none;
   cursor: pointer;
   width: 130px;
@@ -188,10 +155,10 @@ nav ul li a:hover{
 
 }
 
-.github__button{
+.github__button {
   padding: 20px;
-  background-color:#fff;
-  color: var(--first-color);
+  background-color: #fff;
+  color: #a79898;
   border: none;
   cursor: pointer;
   width: 130px;
@@ -202,158 +169,186 @@ nav ul li a:hover{
 
 }
 
-.linkedin__button:hover{
-  background-color: hsl(243, 25%, 73%);
+.linkedin__button:hover {
+  background-color: var(--font-color);
   color: #fff;
 }
-.github__button:hover{
-  background-color: hsl(243, 25%, 73%);
+
+.github__button:hover {
+  background-color: var(--font-color);
   color: #fff;
-  }
+}
 
 /*==================== ABOUT ====================*/
 
-.about{
+.about {
   padding: 80px 120px 120px 120px;
   font-size: 20px;
-  background-color: #fff;
+  background-color: hsl(17, 41%, 97%);
 }
 
-.about__description{
-  text-align:left;
-  margin-bottom: var(--mb-2-5);
-  
+.about__description {
+  text-align: left;
+  margin-bottom: 2.5rem;
+
 }
 
 /*==================== SKILLS ====================*/
-.skills{
+.skills {
   padding: 80px 120px 120px 120px;
   font-size: 20px;
-  background-color: #fff;
+  background-color: hsl(13, 26%, 93%);
 }
-
-.languages,
+.languages, 
 .tools{
-  display: inline-block;
-  justify-content: space-between;
+  margin-top: 10px;
+  width: 40%;
+  box-sizing: border-box;
+  margin-bottom: 60px;
 }
 
-.skills__name{
+.column h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
   font-size: 18px;
-  font-weight: var(--font-medium);
+}
+
+.skills__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  text-align: left;
+  width: 100%; 
+}
+
+.skills__name {
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .skills__bar,
-.skills__percentage{
+.skills__percentage {
   height: 5px;
   border-radius: .25rem;
 }
 
-.skills__bar{
-  background-color:hsl(214, 37%, 55%);
+.skills__bar {
+  background-color: #fff;
 }
 
-.skills__percentage{
+.skills__percentage {
   display: block;
-  background-color: hsl(227, 32%, 30%);
+  background-color: var(--font-color);
 }
 
-.skills__python, 
-.skills__java{
+.skills__python,
+.skills__java {
   width: 100%;
 }
 
 .skills__assembly,
-.skills__c{
+.skills__c {
   width: 80%;
 }
 
 .skills__r,
-.skills__html{
+.skills__html {
   width: 90%;
 }
 
-.skills__title{
+.skills__title {
   display: flex;
   justify-content: space-between;
   margin-top: 5px;
 }
 
-.skills__list{
+.skills__list {
   row-gap: 1.5rem;
   padding-left: 2rem;
+  padding-right: 2 rem;
 }
 
-.type{
+.underline {
   font-size: 25px;
   font-weight: bold;
 }
 
+h3.underline {
+  display: inline-block;
+  border-bottom: 2px solid var(--font-color); /* Adjust the color and thickness as needed */
+  padding-bottom: 5px;
+}
+
 /*==================== EDUCATION ====================*/
-.education{
+.education {
   padding: 80px 120px 120px 120px;
   font-size: 20px;
-  background-color: #fff;
+  background-color:hsl(17, 41%, 97%);
 }
 
-.dates{
+.dates {
   font-weight: 300;
   font-size: 18px;
-  color: hsl(214, 36%, 53%);
+  color: #746064;
+  font-weight: 400;
 }
 
-.school{
+.school {
   margin-top: 15px;
   margin-bottom: 35px;
 }
 
-.location{
+.location {
   font-size: 18px;
-  color:hsl(214, 9%, 48%);
+  color: hsl(214, 9%, 48%);
 }
 
 
 /*==================== EXPERIENCE ====================*/
-.experience{
+.experience {
   padding: 80px 120px 120px 120px;
   font-size: 20px;
-  background-color: #fff;
+  background-color: hsl(13, 26%, 93%);
 }
 
 
 /*==================== PROJECTS ====================*/
-.projects{
+.projects {
   padding: 80px 120px 120px 120px;
   font-size: 20px;
-  background-color: #fff;
+  background-color: hsl(17, 41%, 97%);
 }
+
 .projects__container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 .section__title {
   font-size: 40px;
-  color:hsl(227, 39%, 19%);
+  color: #5e444a;
   font-weight: bold;
   margin-bottom: 30px;
 }
 
-.projects__img{
+.projects__img {
   max-width: 100%;
 }
 
-.projects__title{
-  font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-0-5);
+.projects__title {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
 }
 
-.projects__description{
-  margin-bottom: var(--mb-0-75);
+.projects__description {
+  margin-bottom: 0.75rem;
 }
 
-.projects__button:hover .button__icon{
+.projects__button:hover .button__icon {
   transform: translateX(.25rem);
 }
 
@@ -364,38 +359,43 @@ nav ul li a:hover{
   font-size: 16px;
   text-decoration: none;
   color: #fff;
-  background-color:hsl(227, 39%, 19%);
+  background-color: var(--font-color);
   border-radius: 5px;
   transition: background-color 0.3s ease-in-out;
 }
 
 .more-details-btn:hover {
-  background-color:  hsl(227, 22%, 64%);
-}
-
-.more-details-btn:hover .button__icon{
-  transform: translateX(.25rem);
-  background-color:  hsl(227, 22%, 64%);
-  transition: background-color 0.3s ease-in-out;
+  background-color: #a79898;
 }
 
 .project {
-  width: 48%;
-  margin-bottom: 20px;
+  display: inline-block;
+  width: 45%;
+  margin: 0 1%;
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
 }
 
 /*==================== CONTACT ME ====================*/
-.contact-container{
-  padding: 80px 120px 120px 120px; 
+.contact-container {
+  padding: 80px 120px 120px 120px;
   /* max-width: 700px;
   margin: 50px auto; */
   font-size: 20px;
-  background-color:hsl(213, 44%, 86%) ;
+  background-color:  hsl(13, 26%, 93%);
 }
 
 .contact-header {
   font-size: 40px;
-  color:var(--first-color);
+  color: #5e444a;
   font-weight: bold;
   margin-bottom: 30px;
 }
@@ -410,7 +410,8 @@ label {
   font-size: 18px;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -423,7 +424,7 @@ input, textarea {
 button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color:var(--first-color);
+  background-color: var(--font-color);
   color: #fff;
   border: none;
   border-radius: 25px;
@@ -432,63 +433,58 @@ button {
 }
 
 button:hover {
-  background-color: var(--first-color-lighter);
-  color: var(--first-color);
+  background-color: #a79898;
+  color: var(--first-color-lighter);
 }
 
 
 /*==================== FOOTER ====================*/
 
-.footer{
-  padding-top: 0rem;
+.footer {
+  padding: 0 0 0 120px;
 }
 
-.footer__container{
+.footer__container {
   row-gap: 3.5rem;
 }
 
-.footer__bg{
-  background-color: var(--first-color);
+.footer__bg {
+  background-color: #8a7479;
   padding: 2rem 0 2rem;
 }
 
-.footer__title{
+.footer-title {
   font-size: 30px;
-  margin-bottom: var(--mb-0-25);
-}
-
-.footer__subtitle{
-  font-size: 20px;
-  color: hsl(227, 22%, 64%);
-}
-
-.footer__social{
-  font-size: 1.25rem;
-  margin-right: var(--mb-1-5);
-}
-
-.footer__social:hover{
+  font-weight: 700;
+  margin-bottom: 0.25rem;
   color: var(--first-color-lighter);
 }
 
-.copyright{
-  font-size: 18px;
-  margin-top: var(--mb-3);
+.footer-subtitle {
+  font-size: 20px;
+  color: var(--first-color);
+}
 
+.footer__social {
+  font-size: 1.25rem;
+  margin-right: 1.5rem;
+}
+
+.footer__social:hover {
+  color: var(--first-color-lighter);
+}
+
+.copyright {
+  font-size: 18px;
+  margin-top: 3rem;
   width: 100%;
   text-align: center;
 
-  color: var(--first-color-lighter);
+  color: var(--first-color);
 }
 
 
 .footer__title,
-.footer__subtitle,
 .footer__social {
-  color: #FFF;
+  color: #fff;
 }
-
-
-
-
-
