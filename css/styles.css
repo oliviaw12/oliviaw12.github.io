@@ -178,7 +178,7 @@ nav ul li a:hover{
 }
 
 .header-photo {
-  width: 550px;
+  width: 500px;
   /* max-width: 100%; Ensure the image does not exceed its container */
   height: auto;
   margin-left: auto; /* Move the photo to the right */
