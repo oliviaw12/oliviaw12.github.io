@@ -5,8 +5,8 @@
   /*========== Colors ==========*/
   --font-color: #5a384039;
   --main_colour: hsl(236, 42%, 14%);
-  --second_color: rgba(248, 242, 240, 0.937);
-  --third_color: rgba(246, 238, 235, 0.919);
+  --second_color: rgba(248, 244, 242, 0.936);
+  --third_color: rgba(242, 233, 230, 0.919);
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
@@ -68,7 +68,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: hsla(238, 23%, 32%, 0.84);
+  color: hsla(240, 12%, 63%, 0.846);
 }
 
 .header-container {
@@ -89,14 +89,14 @@ nav ul li a:hover {
   margin-bottom: 12%;
   font-size: 25px;
   text-align: center;
-  color: #c5c7dcdc;
+  color: hsla(19, 18%, 82%, 0.918);
   font-style: normal;
   line-height: 2.8;
 }
 
 .header-text h2 {
   font-size: 35px;
-  color: #c5c7dcdc;
+  color: hsla(19, 26%, 77%, 0.882);;
   text-align: center;
   font-style: normal;
 }
@@ -187,11 +187,11 @@ nav {
 }
 
 .about-col-2 h1 {
-  margin-bottom: 20px;
   font-size: 40px;
   color: var(--main_colour);
   font-family: "Poppins", sans-serif;
   font-weight: bold;
+  margin-bottom: 30px;
 }
 
 .tab-contents {
@@ -265,6 +265,14 @@ h3.underline {
   background-color: var(--third_color);
 }
 
+.education-header {
+  font-size: 40px;
+  color: var(--main_colour);
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
 .dates {
   font-weight: 300;
   font-size: 18px;
@@ -284,6 +292,14 @@ h3.underline {
 
 
 /*==================== EXPERIENCE ====================*/
+.experience-header {
+  font-size: 40px;
+  color: var(--main_colour);
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
 .experience {
   padding: 80px 120px 120px 120px;
   font-size: 20px;
@@ -421,12 +437,12 @@ button:hover {
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 0.25rem;
-  color: var(--second_color);
+  color: var(--third_color);
 }
 
 .footer-subtitle {
   font-size: 20px;
-  color: var(--second_color);
+  color: hsla(240, 15%, 85%, 0.846);
 }
 
 .footer__social {
@@ -435,7 +451,7 @@ button:hover {
 }
 
 .footer__social:hover {
-  color: var(--second_color);
+  color: var(--third_color);
 }
 
 .copyright {
@@ -443,10 +459,10 @@ button:hover {
   margin-top: 3rem;
   width: 100%;
   text-align: center;
-  color: var(--third_color);
+  color: hsla(238, 14%, 48%, 0.846);
 }
 
 .footer__title,
 .footer__social {
-  color: var(--third_color);
+  color:hsla(240, 15%, 85%, 0.846);
 }
