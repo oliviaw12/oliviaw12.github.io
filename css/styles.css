@@ -3,9 +3,10 @@
 
 :root {
   /*========== Colors ==========*/
-  --first-color: hsl(11, 20%, 84%);
-  --first-color-lighter: hsl(17, 41%, 97%);
-  --font-color: #6f4e55;
+  --font-color: #5a384039;
+  --main_colour: hsl(236, 42%, 14%);
+  --second_color: rgba(248, 242, 240, 0.937);
+  --third_color: rgba(246, 238, 235, 0.919);
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
@@ -16,6 +17,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: var(--body-font);
 }
 
 html {
@@ -23,24 +25,8 @@ html {
 }
 
 body {
-  margin: 0 0 3rem 0;
-  font-family: var(--body-font);
   font-size: 0.938rem;
-  background-color: #8a7479;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+  background-color: hsl(236, 42%, 14%);
 }
 
 /* --- HEADER ---- */
@@ -48,10 +34,9 @@ img {
   outline: none;
   width: 100%;
   height: 100vh;
-  background-color: hsl(11, 20%, 84%);
+  background-color: hsl(236, 42%, 14%);
   background-size: cover;
   background-position: center;
-
 }
 
 .container {
@@ -63,7 +48,7 @@ nav {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: #8a7479;
+  background-color: var(--first-color);
 }
 
 nav ul li {
@@ -74,7 +59,7 @@ nav ul li {
 
 /*header words*/
 nav ul li a {
-  color: var(--first-color-lighter);
+  color: var(--second_color);
   text-decoration: none;
   font-size: 18px;
   position: relative;
@@ -83,20 +68,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #a79898;
-}
-
-.sticky-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: hsla(238, 23%, 32%, 0.84);
 }
 
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 85px 50px 120px 60px;
   transition: background-color 0.3s ease;
 }
@@ -109,41 +86,32 @@ nav ul li a:hover {
 
 .header-text {
   margin-top: 12%;
+  margin-bottom: 12%;
   font-size: 25px;
-  text-align: left;
-  color: #a79898;
+  text-align: center;
+  color: #c5c7dcdc;
   font-style: normal;
   line-height: 2.8;
-  padding-left: 2.2rem;
 }
 
 .header-text h2 {
   font-size: 35px;
-  color: #867474;
-  text-align: left;
+  color: #c5c7dcdc;
+  text-align: center;
   font-style: normal;
-  padding-left: 1.0rem;
 }
 
 .header-text h1 {
   font-size: 90px;
-  color: #5e444a;
+  color: var(--second_color);
   font-style: normal;
   line-height: 1.0;
 }
 
-.header-photo {
-  width: 500px;
-  margin-left: auto;
-  margin-bottom: 50px;
-  padding: 0 0.25rem;
-  overflow: hidden;
-}
-
 .linkedin__button {
   padding: 20px;
-  background-color: #fff;
-  color: #a79898;
+  background-color: var(--second_color);
+  color: var(--main_colour);
   border: none;
   cursor: pointer;
   width: 130px;
@@ -157,8 +125,8 @@ nav ul li a:hover {
 
 .github__button {
   padding: 20px;
-  background-color: #fff;
-  color: #a79898;
+  background-color: var(--second_color);
+  color: var(--main_colour);
   border: none;
   cursor: pointer;
   width: 130px;
@@ -170,48 +138,92 @@ nav ul li a:hover {
 }
 
 .linkedin__button:hover {
-  background-color: var(--font-color);
-  color: #fff;
+  background-color: hsla(238, 23%, 32%, 0.84);
+  color: rgba(241, 240, 248, 0.894);
 }
 
 .github__button:hover {
-  background-color: var(--font-color);
-  color: #fff;
+  background-color: hsla(238, 23%, 32%, 0.84);
+  color: rgba(241, 240, 248, 0.894);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /*==================== ABOUT ====================*/
 
-.about {
+.about-container {
   padding: 80px 120px 120px 120px;
   font-size: 20px;
-  background-color: hsl(17, 41%, 97%);
+  background-color: var(--second_color);
 }
 
-.about__description {
-  text-align: left;
-  margin-bottom: 2.5rem;
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
+.about-col-1 {
+  flex-basis: 30%;
+  display: flex;
+  align-items: center;
+}
+
+.about-col-1 img {
+  width: 275px;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 7px var(--second_color),
+    0 0 0 10px var(--main_colour);
+}
+
+.about-col-2 {
+  flex-basis: 70%;
+}
+
+.about-col-2 h1 {
+  margin-bottom: 20px;
+  font-size: 40px;
+  color: var(--main_colour);
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+.tab-contents {
+  display: flex;
+}
+
+.tab-section {
+  flex: 1;
+}
+
+.tab-titles {
+  display: flex;
+  margin: 50px 0 15px 0;
+}
+
+.tab-titles div {
+  flex: 1;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+.column li {
+  margin-bottom: 10px;
+  margin-left: 20px;
+  color: #080808;
+  font-size: 18px;
 }
 
 /*==================== SKILLS ====================*/
 .skills {
-  padding: 80px 120px 120px 120px;
+  padding: 10px 10px 10px 10px;
   font-size: 20px;
-  background-color: hsl(13, 26%, 93%);
-}
-.languages, 
-.tools{
-  margin-top: 10px;
-  width: 40%;
-  box-sizing: border-box;
-  margin-bottom: 60px;
-}
-
-.column h3 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 20px;
-  font-size: 18px;
 }
 
 .skills__container {
@@ -220,7 +232,7 @@ nav ul li a:hover {
   justify-content: space-between;
   align-items: stretch;
   text-align: left;
-  width: 100%; 
+  width: 100%;
 }
 
 .skills__name {
@@ -228,46 +240,10 @@ nav ul li a:hover {
   font-weight: 500;
 }
 
-.skills__bar,
-.skills__percentage {
-  height: 5px;
-  border-radius: .25rem;
-}
-
-.skills__bar {
-  background-color: #fff;
-}
-
-.skills__percentage {
-  display: block;
-  background-color: var(--font-color);
-}
-
-.skills__python,
-.skills__java {
-  width: 100%;
-}
-
-.skills__assembly,
-.skills__c {
-  width: 80%;
-}
-
-.skills__r,
-.skills__html {
-  width: 90%;
-}
-
-.skills__title {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 5px;
-}
-
 .skills__list {
   row-gap: 1.5rem;
   padding-left: 2rem;
-  padding-right: 2 rem;
+  padding-right: 2rem;
 }
 
 .underline {
@@ -277,15 +253,16 @@ nav ul li a:hover {
 
 h3.underline {
   display: inline-block;
-  border-bottom: 2px solid var(--font-color); /* Adjust the color and thickness as needed */
+  border-bottom: 2px solid var(--font-color);
   padding-bottom: 5px;
 }
+
 
 /*==================== EDUCATION ====================*/
 .education {
   padding: 80px 120px 120px 120px;
   font-size: 20px;
-  background-color:hsl(17, 41%, 97%);
+  background-color: var(--third_color);
 }
 
 .dates {
@@ -310,62 +287,23 @@ h3.underline {
 .experience {
   padding: 80px 120px 120px 120px;
   font-size: 20px;
-  background-color: hsl(13, 26%, 93%);
+  background-color: var(--second_color);
 }
 
 
 /*==================== PROJECTS ====================*/
-.projects {
+.projects-container {
   padding: 80px 120px 120px 120px;
-  font-size: 20px;
-  background-color: hsl(17, 41%, 97%);
+  text-align: left;
+  background-color: var(--third_color);
 }
 
-.projects__container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-.section__title {
+.projects-header {
   font-size: 40px;
-  color: #5e444a;
+  color: var(--main_colour);
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
   margin-bottom: 30px;
-}
-
-.projects__img {
-  max-width: 100%;
-}
-
-.projects__title {
-  font-size: 1.125rem;
-  margin-bottom: 0.5rem;
-}
-
-.projects__description {
-  margin-bottom: 0.75rem;
-}
-
-.projects__button:hover .button__icon {
-  transform: translateX(.25rem);
-}
-
-.more-details-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-top: 10px;
-  font-size: 16px;
-  text-decoration: none;
-  color: #fff;
-  background-color: var(--font-color);
-  border-radius: 5px;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.more-details-btn:hover {
-  background-color: #a79898;
 }
 
 .project {
@@ -381,21 +319,47 @@ h3.underline {
 
 .project img {
   max-width: 100%;
-  height: auto;
+  height: 230px;
+  border-radius: 6px;
 }
+
+.project h3 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.project p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.more-details-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--main_colour);
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.more-details-btn:hover {
+  background-color: hsla(238, 23%, 32%, 0.84);
+}
+
 
 /*==================== CONTACT ME ====================*/
 .contact-container {
   padding: 80px 120px 120px 120px;
-  /* max-width: 700px;
-  margin: 50px auto; */
   font-size: 20px;
-  background-color:  hsl(13, 26%, 93%);
+  background-color: var(--second_color);
 }
 
 .contact-header {
   font-size: 40px;
-  color: #5e444a;
+  color: var(--main_colour);
   font-weight: bold;
   margin-bottom: 30px;
 }
@@ -424,8 +388,8 @@ textarea {
 button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: var(--font-color);
-  color: #fff;
+  background-color: var(--main_colour);
+  color: whitesmoke;
   border: none;
   border-radius: 25px;
   cursor: pointer;
@@ -433,8 +397,8 @@ button {
 }
 
 button:hover {
-  background-color: #a79898;
-  color: var(--first-color-lighter);
+  background-color: hsla(238, 23%, 32%, 0.84);
+  color: var(--second_color);
 }
 
 
@@ -449,7 +413,7 @@ button:hover {
 }
 
 .footer__bg {
-  background-color: #8a7479;
+  background-color: hsl(236, 42%, 14%);
   padding: 2rem 0 2rem;
 }
 
@@ -457,12 +421,12 @@ button:hover {
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 0.25rem;
-  color: var(--first-color-lighter);
+  color: var(--second_color);
 }
 
 .footer-subtitle {
   font-size: 20px;
-  color: var(--first-color);
+  color: var(--second_color);
 }
 
 .footer__social {
@@ -471,7 +435,7 @@ button:hover {
 }
 
 .footer__social:hover {
-  color: var(--first-color-lighter);
+  color: var(--second_color);
 }
 
 .copyright {
@@ -479,12 +443,10 @@ button:hover {
   margin-top: 3rem;
   width: 100%;
   text-align: center;
-
-  color: var(--first-color);
+  color: var(--third_color);
 }
-
 
 .footer__title,
 .footer__social {
-  color: #fff;
+  color: var(--third_color);
 }
