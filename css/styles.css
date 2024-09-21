@@ -1,15 +1,17 @@
 /*==================== GOOGLE FONTS ====================*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+
 :root {
   /*========== Colors ==========*/
   --font-color: #5a384039;
-  --main_colour: hsl(236, 42%, 14%);
+  --main_colour: hsla(0, 11%, 72%, 0.826);
   --second_color: rgba(248, 244, 242, 0.936);
   --third_color: rgba(242, 233, 230, 0.919);
 
+
   /*========== Font and typography ==========*/
-  --body-font: "Poppins", sans-serif;
+  --body-font: 'Helvetica', sans-serif;
 }
 
 /*==================== BASE ====================*/
@@ -26,7 +28,7 @@ html {
 
 body {
   font-size: 0.938rem;
-  background-color: hsl(236, 42%, 14%);
+  background-color: var(--main_colour);
 }
 
 /* --- HEADER ---- */
@@ -34,7 +36,7 @@ body {
   outline: none;
   width: 100%;
   height: 100vh;
-  background-color: hsl(236, 42%, 14%);
+  background-color: rgba(222, 206, 202, 0.919);
   background-size: cover;
   background-position: center;
 }
@@ -59,7 +61,7 @@ nav ul li {
 
 /*header words*/
 nav ul li a {
-  color: var(--second_color);
+  color: hsl(0, 0%, 39%);
   text-decoration: none;
   font-size: 18px;
   position: relative;
@@ -68,7 +70,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: hsla(240, 12%, 63%, 0.846);
+  color: #5a384039;
 }
 
 .header-container {
@@ -89,21 +91,21 @@ nav ul li a:hover {
   margin-bottom: 12%;
   font-size: 25px;
   text-align: center;
-  color: hsla(19, 18%, 82%, 0.918);
+  color: hsl(0, 0%, 39%);
   font-style: normal;
   line-height: 2.8;
 }
 
 .header-text h2 {
   font-size: 35px;
-  color: hsla(19, 26%, 77%, 0.882);;
+  color: hsl(0, 0%, 39%);
   text-align: center;
   font-style: normal;
 }
 
 .header-text h1 {
   font-size: 90px;
-  color: var(--second_color);
+  color: black;
   font-style: normal;
   line-height: 1.0;
 }
@@ -120,7 +122,7 @@ nav ul li a:hover {
   font-weight: bold;
   border-radius: 35px;
   margin-right: 0.8rem;
-
+  text-decoration: none;
 }
 
 .github__button {
@@ -134,16 +136,17 @@ nav ul li a:hover {
   font-size: 18px;
   font-weight: bold;
   border-radius: 35px;
+  text-decoration: none;
 
 }
 
 .linkedin__button:hover {
-  background-color: hsla(238, 23%, 32%, 0.84);
+  background-color: hsla(0, 9%, 63%, 0.834);
   color: rgba(241, 240, 248, 0.894);
 }
 
 .github__button:hover {
-  background-color: hsla(238, 23%, 32%, 0.84);
+  background-color: hsla(0, 9%, 63%, 0.834);
   color: rgba(241, 240, 248, 0.894);
 }
 
@@ -155,7 +158,6 @@ nav {
 }
 
 /*==================== ABOUT ====================*/
-
 .about-container {
   padding: 80px 120px 120px 120px;
   font-size: 20px;
@@ -220,106 +222,146 @@ nav {
   font-size: 18px;
 }
 
-/*==================== SKILLS ====================*/
+.bio {
+   margin-bottom: 70px;
+}
+
 .skills {
-  padding: 10px 10px 10px 10px;
-  font-size: 20px;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
 }
 
 .skills__container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: stretch;
-  text-align: left;
-  width: 100%;
-}
-
-.skills__name {
-  font-size: 18px;
-  font-weight: 500;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .skills__list {
-  row-gap: 1.5rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skills__item {
+  background-color: #1c1c1c;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .underline {
-  font-size: 25px;
+  font-size: 24px;
   font-weight: bold;
-}
-
-h3.underline {
-  display: inline-block;
-  border-bottom: 2px solid var(--font-color);
-  padding-bottom: 5px;
+  margin-bottom: 20px;
 }
 
 
 /*==================== EDUCATION ====================*/
 .education {
   padding: 80px 120px 120px 120px;
-  font-size: 20px;
+  /* font-size: 20px; */
   background-color: var(--third_color);
 }
 
-.education-header {
-  font-size: 40px;
-  color: var(--main_colour);
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-
 .dates {
-  font-weight: 300;
-  font-size: 18px;
-  color: #746064;
-  font-weight: 400;
+  font-size: 16px;
+  color: #746064; 
+  margin-bottom: 5px;
 }
 
 .school {
-  margin-top: 15px;
+  margin-top: 18px;
   margin-bottom: 35px;
+}
+
+.school h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.desc {
+  font-size: 16px;
+  margin-bottom: 5px;
 }
 
 .location {
   font-size: 18px;
   color: hsl(214, 9%, 48%);
+  margin-bottom: 10px;
 }
-
 
 /*==================== EXPERIENCE ====================*/
-.experience-header {
-  font-size: 40px;
-  color: var(--main_colour);
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-
 .experience {
-  padding: 80px 120px 120px 120px;
-  font-size: 20px;
-  background-color: var(--second_color);
+  padding: 80px 120px 120px 100px;
 }
 
+.underline {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000; /* Black text for the header */
+}
+
+/* Experience List Layout */
+.experience__list {
+  position: relative;
+  padding-left: 30px;
+  border-left: 2px solid #e0e0e0; /* Lighter grey for vertical line */
+}
+
+.experience__item {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.experience__item::before {
+  content: '';
+  position: absolute;
+  left: -38px; 
+  top: 5px; /* Align vertically with the text */
+  width: 12px;
+  height: 12px;
+  background-color: #d3d3d3; /* Light grey dot */
+  border-radius: 50%; /* Makes the dot circular */
+  border: 2px solid #fff; /* White border for contrast */
+}
+
+.date {
+  font-size: 16px;
+  color: #666666; /* Medium grey for date text */
+  margin-bottom: 5px;
+}
+
+.role {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000; /* Black for role text */
+  margin-bottom: 7px;
+}
+
+.company {
+  font-size: 16px;
+  color: #999999; 
+}
+
+/* Background */
+body {
+  background-color: #fff; 
+  color: #000;
+}
 
 /*==================== PROJECTS ====================*/
 .projects-container {
   padding: 80px 120px 120px 120px;
   text-align: left;
   background-color: var(--third_color);
-}
-
-.projects-header {
-  font-size: 40px;
-  color: var(--main_colour);
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  margin-bottom: 30px;
 }
 
 .project {
@@ -370,58 +412,78 @@ h3.underline {
 .contact-container {
   padding: 80px 120px 120px 120px;
   font-size: 20px;
-  background-color: var(--second_color);
-}
-
-.contact-header {
-  font-size: 40px;
-  color: var(--main_colour);
-  font-weight: bold;
-  margin-bottom: 30px;
+  background-color: #f9f9f9;
+  color: #333; 
 }
 
 .contact-form {
   text-align: left;
+  max-width: 600px; 
+  margin: 0 auto; /* Center the form */
 }
 
 label {
   display: block;
-  margin-bottom: 5px;
-  font-size: 18px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #666; /* Light grey text for the label */
+  font-weight: 500;
 }
 
 input,
 textarea {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #b7b8bb;
-  border-radius: 10px;
+  padding: 12px 16px; /* Slightly larger padding for a modern feel */
+  margin-bottom: 20px;
+  border: 0.5px solid #dfdddd; /* Subtle border */
+  border-radius: 7px; /* Softer corners */
   box-sizing: border-box;
   font-size: 16px;
+  background-color: #fff; /* Clean white background */
+  color: #333; /* Dark text color */
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #999; /* Darken border on focus */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Soft shadow on focus */
+  outline: none;
 }
 
 button {
-  padding: 10px 20px;
+  display: inline-block;
+  padding: 12px 24px;
   font-size: 16px;
-  background-color: var(--main_colour);
-  color: whitesmoke;
+  font-weight: 600;
+  background-color: hsla(0, 9%, 63%, 0.834);
+  color: white;
   border: none;
-  border-radius: 25px;
+  border-radius: 8px; 
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background-color: hsla(238, 23%, 32%, 0.84);
-  color: var(--second_color);
+  background-color: var(--third_color);
+  color: hsla(0, 9%, 63%, 0.834);
+  transform: translateY(-3px); /* Slight lift effect on hover */
 }
 
+button:active {
+  transform: translateY(0); /* Reset lift effect on click */
+}
+
+/* Textarea Styling */
+textarea {
+  resize: vertical; 
+  min-height: 150px; 
+}
 
 /*==================== FOOTER ====================*/
 
-.footer {
-  padding: 0 0 0 120px;
+/* .footer {
+  padding: 80 0 0 120px;
 }
 
 .footer__container {
@@ -429,20 +491,20 @@ button:hover {
 }
 
 .footer__bg {
-  background-color: hsl(236, 42%, 14%);
+  background-color: rgba(222, 206, 202, 0.919);
   padding: 2rem 0 2rem;
 }
 
 .footer-title {
-  font-size: 30px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 600;
   margin-bottom: 0.25rem;
-  color: var(--third_color);
+  color: rgba(54, 54, 54, 0.919);
 }
 
 .footer-subtitle {
   font-size: 20px;
-  color: hsla(240, 15%, 85%, 0.846);
+  color: rgba(54, 54, 54, 0.919);
 }
 
 .footer__social {
@@ -459,10 +521,67 @@ button:hover {
   margin-top: 3rem;
   width: 100%;
   text-align: center;
-  color: hsla(238, 14%, 48%, 0.846);
+  color: hsla(10, 3%, 41%, 0.846);
 }
 
 .footer__title,
 .footer__social {
-  color:hsla(240, 15%, 85%, 0.846);
+  color:hsla(10, 3%, 41%, 0.846);
+  text-decoration: none;
+  margin-top: 30px;
+} */
+ .footer {
+  background-color: rgba(222, 206, 202, 0.919);
+  padding: 70px 70px 20px 120px; /* Corrected padding syntax */
+  display: flex; /* Enables flexbox */
+  flex-direction: column; /* Stacks children vertically */
+}
+
+.footer__container {
+  row-gap: 3.5rem;
+  display: flex; /* Enables flexbox for the container */
+  justify-content: space-between; /* Aligns items with space between */
+}
+
+.footer-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: rgba(54, 54, 54, 0.919);
+}
+
+.footer-subtitle {
+  font-size: 20px;
+  color: rgba(78, 78, 78, 0.919);
+}
+
+.footer__social {
+  font-size: 1.25rem;
+  margin-left: 1.5rem; /* Adjust spacing between icons */
+}
+
+.footer__social:hover {
+  color: var(--third_color);
+}
+
+.copyright {
+  font-size: 18px;
+  margin-top: 3rem;
+  width: 100%;
+  text-align: center;
+  color: hsla(10, 3%, 41%, 0.846);
+}
+
+.footer__title,
+.footer__social {
+  color: hsla(10, 3%, 41%, 0.846);
+  text-decoration: none;
+  margin-top: 30px;
+}
+
+/* Ensure the social icons align to the right */
+.footer__social-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns social icons to the right */
+  margin-top: auto; /* Pushes the social icons to the bottom */
 }
